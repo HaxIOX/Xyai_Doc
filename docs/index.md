@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Xyai"
-  text: ""
+  text: "AI聚合站"
   tagline: 一个想让大家都可以用上AI工具的小站
   actions:
     - theme: brand
