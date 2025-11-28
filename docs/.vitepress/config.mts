@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Xyai",
   description: "一个想让大家都可以用上AI工具的小站",
+  base: '/', 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
