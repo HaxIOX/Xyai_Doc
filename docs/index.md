@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Xyai"
-  text: "A AI Site"
+  text: "一个想让大家都可以用上AI工具的小站"
   tagline: My great project tagline
   actions:
     - theme: brand
