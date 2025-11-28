@@ -1,0 +1,10 @@
+/* 调大左侧目录字体（Sidebar） */
+.VPSidebarItem .item .text {
+  font-size: 16px !important;  /* 想更大就改 20px、22px */
+}
+
+/* 如果还想更明显一点，也可以加粗： */
+.VPSidebarItem .item .text {
+  font-size: 16px !important;
+  font-weight: 600;
+}

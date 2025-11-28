@@ -8,11 +8,17 @@ hero:
   tagline: My great project tagline
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 使用教程
+      link: /guide/codexstart.md
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 套餐相关
+      link: /combo.md
+    - theme: alt
+      text: Codex使用问题
+      link: /question/codexq.md
+    - theme: alt
+      text: 常见问题
+      link: /faq.md
 
 features:
   - title: Feature A
