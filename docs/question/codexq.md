@@ -2,8 +2,6 @@
 
 本文汇总了使用 Codex 过程中常见的问题及对应处理方式，建议按照问题现象逐项排查。
 
----
-
 ## 一、响应慢 / 一直加载
 
 **现象：**
@@ -26,8 +24,6 @@
 
 3. 在客户端或配置中，将接口域名切换为测速结果较优的节点。
 
----
-
 ## 二、Connection failed（连接失败）
 
 **报错示例：**
@@ -47,8 +43,6 @@ Connection failed: error sending request for url (https://new.xychatai.com/codex
 2. 如不确定或首次安装失败，建议 **重新执行一遍一键脚本**；
 3. 执行完成后，重启相关服务或工具，再尝试发起请求。
 
-------
-
 ## 三、插件中使用 Codex 时卡住 / reconnecting
 
 **常见现象：**
@@ -64,8 +58,6 @@ Connection failed: error sending request for url (https://new.xychatai.com/codex
    - 检查网络是否正常；
    - 按上文方法更换节点域名；
    - 或重新登录 / 重启插件。
-
-------
 
 ## 四、报错 400：all codex accounts are unavailable
 
