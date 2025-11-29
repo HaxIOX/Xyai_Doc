@@ -2,19 +2,23 @@
 
 在[站点](https://new.xychatai.com/)注册账号
 
-# 兑换码兑换
+# 购买方式
 
-点击左上角**兑换码兑换**，粘贴兑换码后，点击立即兑换
+**站内购买**
 
-（如果兑换失败，请您稍等片刻再兑换一次）
+选择合适的套餐后下单即可，付款后在左侧导航栏选择你需要的服务即可使用
 
-然后在左侧点击**vibecode**
+**兑换码兑换**
 
-![image-20251111221713527](assets\image-20251111221713527.png)
+点击左上角**兑换码兑换**，如果兑换失败，请您稍等片刻再兑换一次
+
+![image-20251129111009974](assets/image-20251129111009974.png)
+
+然后在左侧导航栏点击**vibecode**
 
 首先进入的是**控制台**
 
-后续您可以在这个页面查看额度与使用情况
+后续您可以在这个页面**查看额度**与**使用情况**
 
 ![image-20251115173320105](assets/image-20251115173320105.png)
 
@@ -22,24 +26,7 @@
 
 点击使用教程，根据您使用的系统，选择运行脚本安装环境
 
-## cc switch配置
+> 1. 脚本会自动配置环境变量和API密钥
+> 2. 配置完成后重启终端即可开始使用AI编程助手
+> 3. 开始使用时，请一直回车确定，直到出现提示符
 
-补充auth与config
-
-```bash
-CC switch 调整的auth 缺了东西， 然后config.toml也要修改
-
-preferred_auth_method = "apikey"
-disable_response_storage = true
-model_provider = "codex"
-
-[model_providers.codex]
-name = "codex"
-base_url = "https://node1.xychatai.com/codex/v1"
-wire_api = "responses"
-env_key = "CODEX_API_KEY"
-```
-
-然后 auth 里面吧 CODEX_API_KEY 配上，基本就是脚本的内容了
-
-> 来自于vincent佬

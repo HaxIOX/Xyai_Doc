@@ -1,3 +1,4 @@
+//V2.0.0配置
 import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
@@ -8,7 +9,9 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
+      { text: '官网', link: 'https://new.xychatai.com/pastel/#/carlist' },
       { text: 'Home', link: '/' },
+      { text: 'Team店铺', link: 'https://newshop.xychatai.com/' },
       { text: '站长的碎碎念', link: '/boss-index.md' }
     ],
 
@@ -24,21 +27,21 @@ export default defineConfig({
         text: 'Codex',
         items: [
           { text: '使用说明', link: '/guide/codexstart.md' },
-          { text: '常见问题', link: '/question/codexq.md' }
+        //  { text: '常见问题', link: '/question/codexq.md' }
         ]
       },
             {
         text: 'Claude Code',
         items: [
           { text: '使用说明', link: '/guide/ccstart.md' },
-          { text: '常见问题', link: '/question/claudecodeq.md' }
+         // { text: '常见问题', link: '/question/claudecodeq.md' }
         ]
       },
         {
         text: '镜像',
         items: [
           { text: '使用说明', link: '/guide/mirror.md' },
-          { text: '常见问题', link: '/question/mirror.md' }
+          //{ text: '常见问题', link: '/question/mirror.md' }
         ]
       },
                   {
@@ -46,9 +49,23 @@ export default defineConfig({
         items: [
           { text: '使用说明', link: '/guide/team.md' },
         ]
+      },
+                        {
+        text: '常见问题',
+        items: [
+          { text: '常见问题解答', link: 'faq.md' },
+        ]
       }
     ],
-
+     search: {
+      provider: 'local'
+    },
+    outline: [1,2,3],
+ //页脚
+    footer: { 
+      message: 'Made with by Xyai Team', 
+      copyright: `MIT License|Copyright © ${new Date().getFullYear()} present Evan You`,
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]

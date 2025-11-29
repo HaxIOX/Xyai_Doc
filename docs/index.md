@@ -6,9 +6,15 @@ hero:
   name: "Xyai"
   text: "AI聚合站"
   tagline: 一个想让大家都可以用上AI工具的小站
+  image:
+    src: /hero-ai.png      # 对应刚才放在 public 里的那张
+    alt: Xyai AI 聚合站
   actions:
     - theme: brand
-      text: 使用教程
+      text: 站点介绍
+      link: /about-site.md
+    - theme: brand
+      text: 🚀 快速上手
       link: /guide/codexstart.md
     - theme: alt
       text: 套餐相关
@@ -21,11 +27,15 @@ hero:
       link: /faq.md
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 🚀
+    title: 一站式 AI 工具
+    details: 整合主流 AI 开发工具，无需多处注册，开箱即用
+  - icon: 📖
+    title: 国内友好教程
+    details: 专为国内环境优化，配图详细，新手 5 分钟上手
+  - icon: 💬
+    title: 贴心问答支持
+    details: 覆盖高频问题，遇到卡点快速解决，少走弯路
+
 ---
 
