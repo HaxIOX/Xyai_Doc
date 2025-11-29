@@ -13,30 +13,26 @@ hero:
       text: 站点介绍
       link: /about-site.md
     - theme: brand
+      text: 官网直达      
+      link: https://new.xychatai.com/pastel/#/carlist
+    - theme: brand
       text: 🚀 codex快速上手
       link: /guide/codexstart.md
     - theme: alt
-      text: 套餐相关
+      text: 套餐介绍
       link: /combo.md
     - theme: alt
       text: 常见问题
       link: /faq.md
-
-popup: |
-  ## 🎉 11月29日活动公告
-  - codex 和 claude code 的套餐于今晚 8 点重新回归 🎉 
-
-  - ✅ **85 折活动优惠码**：`malajichi`（没错就是我 hiahiahia）
-  - 📈 90刀/天 codex套餐调整为59.9元
-  - 📈 30刀/天 claude code套餐调整为199元
  
 features:
   - icon: 🚀
     title: 一站式 AI 工具
     details: 整合主流 AI 开发工具，无需多处注册，开箱即用
   - icon: 📖
-    title: 国内友好教程
+    title: 官网直达
     details: 专为国内环境优化，配图详细，新手 5 分钟上手
+    link: https://new.xychatai.com/pastel/#/carlist
   - icon: 💬
     title: 贴心问答支持
     details: 覆盖高频问题，遇到卡点快速解决，少走弯路

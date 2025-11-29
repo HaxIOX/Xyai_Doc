@@ -2,14 +2,9 @@
 
 ## Codex 常见问题
 
-1.响应慢/一直加载
+**1.响应慢或者一直加载**
 
-**现象：**
-
-- 对话“转圈圈”很久才有回复
-- 有时一直等待，没有结果
-
-**可能原因：** 
+可能原因：
 当前使用的域名所在的网络线路，在你本地运营商环境中质量较差（高延迟或丢包）。
 
 **解决方案：**
@@ -24,7 +19,7 @@
 
 3. 在客户端或配置中，将接口域名切换为测速结果较优的节点。
 
-2.Connection failed（连接失败）
+**2.Connection failed（连接失败）**
 
 **报错示例：**
 
@@ -42,7 +37,7 @@ Connection failed: error sending request for url (https://new.xychatai.com/codex
 1. 如不确定或首次安装失败，建议 **重新执行一遍一键脚本**；
 2. 执行完成后，重启相关服务或工具，再尝试发起请求。
 
-3.插件中使用 Codex 时卡住 / reconnecting
+**3.插件中使用 Codex 时卡住 / reconnecting**
 
 **常见现象：**
 
@@ -58,7 +53,7 @@ Connection failed: error sending request for url (https://new.xychatai.com/codex
    - 按上文方法更换节点域名；
    - 或重新登录 / 重启插件。
 
-4.报错 400：all codex accounts are unavailable
+**4.报错 400**
 
 **报错示例：**
 
@@ -74,6 +69,40 @@ limited or failed)","type":"request_error"}}
 **解决方案：**
 
 1. 建议 **稍作等待后再重试**，等待站长补号，通常 **30 分钟左右**即可恢复。
+
+**5.  Failed to install Codex**
+
+```bash
+ Failed to install Codex: 无法加载文件 C:\Program Files\nodejs\npm.ps1
+```
+
+这个错误提示表明 **PowerShell 的执行策略阻止了脚本的运行**，而 `npm.ps1` 是一个 PowerShell 脚本文件，因此被拦截了。
+
+**解决方案**
+
+1.管理员权限运行 PowerShell
+
+```bash
+Set-ExecutionPolicy RemoteSigned
+```
+
+输入命令后会提示你确认是否更改策略，输入 Y 确认即可。
+
+2.使用 CMD 或 PowerShell 的“绕过模式”启动
+
+```
+powershell -ExecutionPolicy Bypass
+```
+
+3.验证是否修复成功
+
+在修改策略后，再次运行：
+
+```powershell
+npm -v
+```
+
+如果正常显示 npm 版本号，则说明问题已解决
 
 ## claude code常见问题
 
@@ -103,18 +132,28 @@ A: 目前后台多个账号轮询，基本稳定。
 
 ## cc switch使用教程
 
-auth 里面填写CODEX_API_KEY 
+auth 里面填写API_KEY 
 
 ```bash
-preferred_auth_method = "apikey"
+odel_provider = "codex"
+model = "gpt-5.1-codex-max"
+model_reasoning_effort = "high"
 disable_response_storage = true
-model_provider = "codex"
 
 [model_providers.codex]
 name = "codex"
-base_url = "https://node1.xychatai.com/codex/v1"
+base_url = "https://new.xychatai.com/codex/v1"
 wire_api = "responses"
 env_key = "CODEX_API_KEY"
+[features]
+web_search_request = true
+
+[notice]
+"hide_gpt-5.1-codex-max_migration_prompt" = true
 ```
 
-来自于`vincent`佬
+或者使用cc switch的配置指导
+
+- key：在控制台获取
+- url：https://new.xychatai.com/codex/v1
+

@@ -8,8 +8,8 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '官网', link: 'https://new.xychatai.com/pastel/#/carlist' },
       { text: 'Home', link: '/' },
+      { text: '官网直达', link: 'https://new.xychatai.com/pastel/#/carlist' },
       { text: 'Team店铺', link: 'https://newshop.xychatai.com/' },
       { text: '站长的碎碎念', link: '/boss-index.md' }
     ],
