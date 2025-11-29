@@ -18,9 +18,11 @@ export default defineConfig({
     sidebar: [
 
       {
-        text: '套餐简介',
+        text: '站点介绍',
         items: [
-          { text: '使用说明', link: 'combo.md' },
+          { text: '介绍', link: 'about-site.md' },
+          { text: '套餐说明', link: 'combo.md' },
+          { text: '更新日志', link: 'update.md' },
         ]
       },
       {
@@ -60,8 +62,11 @@ export default defineConfig({
      search: {
       provider: 'local'
     },
-    outline: [1,2,3],
- //页脚
+    outline: {
+      label: '本页目录',   // 是替换 “On this page
+      level: [1, 2, 3],    
+    },
+   //页脚
     footer: { 
       message: 'Made with by Xyai Team', 
       copyright: `MIT License|Copyright © ${new Date().getFullYear()} present Evan You`,

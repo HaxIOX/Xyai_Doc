@@ -1,5 +1,6 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
+
 layout: home
 
 hero:
@@ -20,9 +21,6 @@ hero:
       text: 套餐相关
       link: /combo.md
     - theme: alt
-      text: Codex使用问题
-      link: /question/codexq.md
-    - theme: alt
       text: 常见问题
       link: /faq.md
 
@@ -37,5 +35,5 @@ features:
     title: 贴心问答支持
     details: 覆盖高频问题，遇到卡点快速解决，少走弯路
 
----
 
+---
