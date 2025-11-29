@@ -34,7 +34,7 @@
 
 ![image-20251129142535363](assets/image-20251129142535363.png)
 
-您拿着这个`联系方式`去左上角的**[订单查询](https://newshop.xychatai.com/user/index/query)**，输入后可以查询到您的兑换码
+您拿着这个**联系方式**去左上角的[订单查询](https://newshop.xychatai.com/user/index/query)，输入后可以查询到您的兑换码
 
 ## 售后服务
 

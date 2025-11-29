@@ -2,7 +2,7 @@
 
 ## Codex 常见问题
 
-1.响应慢 / 一直加载
+1.响应慢/一直加载
 
 **现象：**
 
@@ -39,9 +39,8 @@ Connection failed: error sending request for url (https://new.xychatai.com/codex
 
 **解决方案：**
 
-1. 确认已按照文档完整执行过一键安装脚本；
-2. 如不确定或首次安装失败，建议 **重新执行一遍一键脚本**；
-3. 执行完成后，重启相关服务或工具，再尝试发起请求。
+1. 如不确定或首次安装失败，建议 **重新执行一遍一键脚本**；
+2. 执行完成后，重启相关服务或工具，再尝试发起请求。
 
 3.插件中使用 Codex 时卡住 / reconnecting
 
@@ -64,19 +63,17 @@ Connection failed: error sending request for url (https://new.xychatai.com/codex
 **报错示例：**
 
 ```bash
-unexpected status 400 Bad Request: {"error":{"message":"all codex accounts are unavailable (rate limited or failed)","type":"request_error"}}
+■ unexpected status 400 Bad Request: {"error":{"message":"codex号池无可用的账号|No available codex accounts in pool(rate
+limited or failed)","type":"request_error"}}
 ```
 
 **含义：**
 
-- 当前所有 Codex 账户均不可用，
-  可能处于**限流（rate limit）\**或\**临时故障**状态。
+- 当前所有 Codex 账户均不可用，可能是号池账号不足。
 
 **解决方案：**
 
-1. 一般属于服务端压力过大或短暂异常，无需本地操作；
-2. 建议 **稍作等待后再重试**，通常 **30 分钟左右**即可恢复；
-3. 若长时间无法恢复，可联系支持，反馈具体报错信息。
+1. 建议 **稍作等待后再重试**，等待站长补号，通常 **30 分钟左右**即可恢复。
 
 ## claude code常见问题
 
@@ -86,7 +83,7 @@ unexpected status 400 Bad Request: {"error":{"message":"all codex accounts are u
 500 {"error":{"code":null,"message":"没有可用token（traceid: cd311bf0a9777b18aa39780bab544328）","param":null,"type":"invalid_request_error"}}
 ```
 
-号池额度不够，联系客服后等待半个小时左右重试
+号池额度不够，联系客服后等待半个小时左右重试。
 
 ## 使用相关
 

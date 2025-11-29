@@ -8,14 +8,14 @@ hero:
   text: "AI聚合站"
   tagline: 一个想让大家都可以用上AI工具的小站
   image:
-    src: /hero-ai.png      # 对应刚才放在 public 里的那张
+    src: /hero-ai.png      # home页面右侧图片
     alt: Xyai AI 聚合站
   actions:
     - theme: brand
       text: 站点介绍
       link: /about-site.md
     - theme: brand
-      text: 🚀 快速上手
+      text: 🚀 codex快速上手
       link: /guide/codexstart.md
     - theme: alt
       text: 套餐相关
