@@ -23,11 +23,12 @@ hero:
       link: /faq.md
 
 popup: |
-  ## 🎉 活动公告
-  - codex 和 claude code 的套餐将于今晚 8 点重新回归 🎉 
+  ## 🎉 11月29日活动公告
+  - codex 和 claude code 的套餐于今晚 8 点重新回归 🎉 
 
   - ✅ **85 折活动优惠码**：`malajichi`（没错就是我 hiahiahia）
-  - ⏰ 活动时间：今晚 20:00 开始
+  - 📈 90刀/天 codex套餐调整为59.9元
+  - 📈 30刀/天 claude code套餐调整为199元
  
 features:
   - icon: 🚀

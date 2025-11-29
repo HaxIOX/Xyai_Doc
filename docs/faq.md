@@ -103,4 +103,18 @@ A: 目前后台多个账号轮询，基本稳定。
 
 ## cc switch使用教程
 
-待补充....
+auth 里面填写CODEX_API_KEY 
+
+```bash
+preferred_auth_method = "apikey"
+disable_response_storage = true
+model_provider = "codex"
+
+[model_providers.codex]
+name = "codex"
+base_url = "https://node1.xychatai.com/codex/v1"
+wire_api = "responses"
+env_key = "CODEX_API_KEY"
+```
+
+来自于`vincent`佬
