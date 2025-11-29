@@ -156,3 +156,194 @@ img {
 }
 
 
+/* 顶部 hero 布局 */
+.xy-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 32px 0 24px;
+}
+
+.xy-hero-main {
+  max-width: 520px;
+}
+
+.xy-hero-title {
+  margin: 0 0 12px;
+  line-height: 1.1;
+}
+
+.xy-hero-name {
+  font-size: 40px;
+  font-weight: 800;
+  color: #4f46e5;
+}
+
+.xy-hero-text {
+  font-size: 40px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.xy-hero-tagline {
+  margin: 0 0 20px;
+  font-size: 18px;
+  color: #4b5563;
+}
+
+.xy-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.xy-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #111827;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.xy-btn-primary {
+  background: #4f46e5;
+  color: #fff;
+}
+
+/* 小人图片区域 */
+.xy-hero-image img {
+  width: 340px;
+  max-width: 40vw;
+  height: auto;
+}
+
+/* 三个 feature 卡片 */
+.xy-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.xy-feature-card {
+  padding: 20px 24px;
+  border-radius: 20px;
+  background: #f9fafb;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.xy-feature-card h3 {
+  margin: 8px 0 6px;
+}
+
+.xy-feature-card p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.xy-feature-icon {
+  font-size: 26px;
+}
+
+/* 活动入口按钮 */
+.campaign-entry {
+  position: fixed;
+  right: 32px;
+  top: 96px;
+  z-index: 30;
+}
+
+.campaign-btn {
+  border-radius: 999px;
+  padding: 6px 16px;
+  border: none;
+  background: #f97316;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(248, 113, 113, 0.25);
+}
+
+/* 弹窗遮罩层 */
+.campaign-mask {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+}
+
+/* 弹窗主体 */
+.campaign-modal {
+  width: 420px;
+  max-width: 90vw;
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px 24px 20px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.45);
+}
+
+.campaign-modal h2 {
+  margin: 0 0 12px;
+}
+
+.campaign-modal p {
+  margin: 0 0 12px;
+  color: #475569;
+}
+
+.campaign-modal ul {
+  padding-left: 1.2em;
+  margin: 0 0 16px;
+  color: #475569;
+}
+
+.campaign-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.campaign-primary {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #4f46e5;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.campaign-close {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #e5e7eb;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 响应式处理 */
+@media (max-width: 960px) {
+  .xy-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .xy-hero-image img {
+    width: 260px;
+    max-width: 70vw;
+  }
+
+  .xy-features {
+    grid-template-columns: 1fr;
+  }
+
+  .campaign-entry {
+    display: none; /* 小屏先把右上角按钮隐藏，避免挡内容 */
+  }
+}

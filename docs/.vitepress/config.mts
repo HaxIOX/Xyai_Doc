@@ -1,6 +1,5 @@
 //V2.0.0配置
 import { defineConfig } from 'vitepress'
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Xyai",
@@ -71,6 +70,7 @@ export default defineConfig({
       message: 'Made with by Xyai Team', 
       copyright: `MIT License|Copyright © ${new Date().getFullYear()} present Evan You`,
     },
+    
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
