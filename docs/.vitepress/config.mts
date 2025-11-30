@@ -8,7 +8,8 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
+      { text: '首页', link: '/' },
+      { text: '文档', link: '/guide/' },
       { text: '官网直达', link: 'https://new.xychatai.com/pastel/#/carlist' },
       { text: 'Team店铺', link: 'https://newshop.xychatai.com/' },
       { text: '站长的碎碎念', link: '/boss-index.md' }
@@ -28,14 +29,14 @@ export default defineConfig({
         text: 'Codex',
         items: [
           { text: '使用说明', link: '/guide/codexstart.md' },
-        //  { text: '常见问题', link: '/question/codexq.md' }
+          { text: 'cc-switch配置', link: '/guide/codex-switch.md' }
         ]
       },
             {
         text: 'Claude Code',
         items: [
           { text: '使用说明', link: '/guide/ccstart.md' },
-         // { text: '常见问题', link: '/question/claudecodeq.md' }
+        //{ text: 'cc-switch配置', link: '/guide/claude-switch.md' }
         ]
       },
         {
@@ -65,6 +66,7 @@ export default defineConfig({
       label: '本页目录',   // 是替换 “On this page
       level: [1, 2, 3],    
     },
+
    //页脚
     footer: { 
       message: 'Made with by Xyai Team', 

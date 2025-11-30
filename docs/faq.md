@@ -24,7 +24,8 @@
 **报错示例：**
 
 ```bash
-Connection failed: error sending request for url (https://new.xychatai.com/codex/v1/responses)
+Connection failed: error sending request for url
+(https://new.xychatai.com/codex/v1/responses)
 ```
 
 **可能原因：**
@@ -58,8 +59,9 @@ Connection failed: error sending request for url (https://new.xychatai.com/codex
 **报错示例：**
 
 ```bash
-■ unexpected status 400 Bad Request: {"error":{"message":"codex号池无可用的账号|No available codex accounts in pool(rate
-limited or failed)","type":"request_error"}}
+unexpected status 400 Bad Request: {"error":{"message":"codex号池无可用的账号
+|No available codex accounts in pool
+(ratelimited or failed)","type":"request_error"}}
 ```
 
 **含义：**
@@ -130,30 +132,5 @@ A: 目前后台多个账号轮询，基本稳定。
 
 > 站点还有很多不足的地方，希望大佬们多多包涵，有什么问题与完善建议都可以提出，我们会努力完善做到更好。
 
-## cc switch使用教程
 
-auth 里面填写API_KEY 
-
-```bash
-odel_provider = "codex"
-model = "gpt-5.1-codex-max"
-model_reasoning_effort = "high"
-disable_response_storage = true
-
-[model_providers.codex]
-name = "codex"
-base_url = "https://new.xychatai.com/codex/v1"
-wire_api = "responses"
-env_key = "CODEX_API_KEY"
-[features]
-web_search_request = true
-
-[notice]
-"hide_gpt-5.1-codex-max_migration_prompt" = true
-```
-
-或者使用cc switch的配置指导
-
-- key：在控制台获取
-- url：https://new.xychatai.com/codex/v1
 

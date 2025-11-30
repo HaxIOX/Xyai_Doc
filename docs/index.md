@@ -16,7 +16,10 @@ hero:
       text: 官网直达      
       link: https://new.xychatai.com/pastel/#/carlist
     - theme: brand
-      text: 🚀 codex快速上手
+      text: 官方文档
+      link: /guide/index.md
+    - theme: brand
+      text: 🚀codex快速上手
       link: /guide/codexstart.md
     - theme: alt
       text: 套餐介绍
