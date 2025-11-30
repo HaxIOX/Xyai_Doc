@@ -1,4 +1,4 @@
-# Codex 配置 🔧
+# 🔧Codex 配置 
 
 ## 配置步骤
 
@@ -64,7 +64,7 @@ web_search_request = true                   # 启用网络搜索功能
 ```
 :::
 
-## 配置说明 📖
+## 📖配置说明 
 
 ### 模型配置项
 
@@ -79,10 +79,9 @@ web_search_request = true                   # 启用网络搜索功能
 - `wire_api`: API 通信协议类型
 - `env_key`: 环境变量中的 API Key 名称
 
-## 注意事项 ⚠️
+## ⚠注意事项 
 
-- 🔑 请妥善保管您的 API Key，不要泄露给他人
-- 🔄 配置修改后需要重启 Claude Code 才能生效
+- 🔄 配置修改后需要重启codex才能生效
 - 💰 使用 `max` 模型会消耗更多额度，请根据实际需求选择合适的模型
 - 📊 可在 [Vibe Code 控制台](https://new.xychatai.com/pastel/#/vibe-code?activeMenu=dashboard) 查看使用情况和剩余额度
 

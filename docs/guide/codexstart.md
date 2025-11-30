@@ -24,6 +24,40 @@
 > 1. 脚本会自动配置环境变量和 API 密钥
 > 2. 配置完成后重启终端即可开始使用 AI 编程助手
 
+# max模型配置
+
+## 终端使用
+
+1.在终端里直接跑：
+
+```
+codex -m gpt-5.1-codex-max
+```
+
+2.配置为默认模型
+
+找到 Codex 的配置文件（通常是）：
+
+- `~/.codex/config.toml`
+
+如果没有这个文件，就自己新建一个。
+
+里面加上或修改这一行：
+
+```
+model = "gpt-5.1-codex-max"
+```
+
+保存之后，下次你直接跑：
+
+```
+codex
+```
+
+它就会默认用 `gpt-5.1-codex-max` 作为当前模型，再让你选推理档位。
+
+3.在[cc-switch配置](./codex-switch)，也是相当于修改config.toml文件了
+
 ## VS Code 中启用 `codex-max` 模型
 
 ### Windows 环境 
@@ -96,7 +130,7 @@ DEFAULT_MODEL_ORDER=[
 
 ---
 
-### 🐧🍎Linux / macOS 环境 
+### 🍎Linux / macOS 环境 
 
 由于不同平台/发行版打包方式不一样，有时候前端资源路径不完全相同，如果你找不到固定路径，可以这样操作：
 
@@ -132,7 +166,7 @@ grep -R "DEFAULT_MODEL_ORDER" -n .
 找到包含 `DEFAULT_MODEL_ORDER` 的 `index-*.js` 文件后，用编辑器打开，原始内容大致为：
 
 ::: code-group
-```javascript [index-*.js (原始配置)]
+```js
 DEFAULT_MODEL_ORDER=["gpt-5.1-codex","gpt-5-codex","gpt-5.1","gpt-5"]
 ```
 :::
