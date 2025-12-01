@@ -130,7 +130,7 @@ DEFAULT_MODEL_ORDER=[
 
 打开模型选择列表，就可以看到 `gpt-5.1-codex-max` 了。
 
-如果还是没有模型列表，或者选择max调用失败，可以参考[配置](./guide.md#call-failed)
+如果还是没有模型列表，或者选择max调用失败，可以参考[配置](/guide/codexstart#call-failed)
 
 ---
 
