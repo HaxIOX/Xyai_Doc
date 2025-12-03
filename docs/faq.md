@@ -16,8 +16,9 @@
    - `node1.xychatai.com`
    - `node2.xychatai.com`
    - `node3.xychatai.com`
-
 3. 在客户端或配置中，将接口域名切换为测速结果较优的节点。
+
+------
 
 **2.Connection failed（连接失败）**
 
@@ -38,6 +39,8 @@ Connection failed: error sending request for url
 1. 如不确定或首次安装失败，建议 **重新执行一遍一键脚本**；
 2. 执行完成后，重启相关服务或工具，再尝试发起请求。
 
+------
+
 **3.插件中使用 Codex 时卡住 / reconnecting**
 
 **常见现象：**
@@ -53,6 +56,8 @@ Connection failed: error sending request for url
 >   - 检查网络是否正常；
 >   - 按上文方法更换节点域名；
 >   - 或重新登录 / 重启插件。
+
+------
 
 **4.报错 400**
 
@@ -80,6 +85,8 @@ HTTP 503: {"error":{"code":"","message":"所有令牌分组 Codex专用 下
 ```
 
 > 当号池没有可使用的账号时，会自动切到备用的api渠道，该渠道暂时不支持`gpt-5.1-codex-max`模型,可先切回其他模型，等待补号后使用`max`模型。
+
+------
 
 **5.  Failed to install Codex**
 
@@ -115,6 +122,16 @@ HTTP 503: {"error":{"code":"","message":"所有令牌分组 Codex专用 下
 >
 > 如果正常显示 npm 版本号，则说明问题已解决
 
+------
+
+**6.命令行一切正常，但是在vscode插件里遇到这个报错：`Missing environment variable`**
+
+openai官方更新了codex插件和codex cli导致的
+
+**解决方案**
+
+>卸载重装下codex插件，如果还是不行删除配置文件`~/.codex/config.toml`
+
 ## claude code常见问题
 
 1.500错误
@@ -123,11 +140,15 @@ HTTP 503: {"error":{"code":"","message":"所有令牌分组 Codex专用 下
 500 {"error":{"code":null,"message":"没有可用token（traceid: cd311bf0a9777b18aa39780bab544328）","param":null,"type":"invalid_request_error"}}
 ```
 
-
-
 > 号池额度无了，联系客服后等待半个小时左右重试。
 
 ## 使用相关
+
+### Q: codex的重置时间
+
+A: 周期内首次使用后，往后移动周期时间计算的
+
+> 也就是今天10点首次使用，那就是明天10点进行重置，十点重置后，在10:30进行当天的首次使用，同理第三天的重置时间为10:30
 
 ### Q: cursor可以使用吗？
 
