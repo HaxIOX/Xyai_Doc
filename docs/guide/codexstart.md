@@ -197,7 +197,7 @@ DEFAULT_MODEL_ORDER=[
 
 ---
 
-### 调用失败的解决方法 {#call-failed}
+### 模型消失或调用失败的解决方法 {#call-failed}
 
 **如果重启后列表里还是看不到 max 模型**
 
@@ -249,6 +249,48 @@ requires_openai_auth = true
 
 
 ---
+
+## 插件配置相关问题
+
+### Missing environment variable
+
+更新插件版本之后导致报错Missing environment variable，
+
+解决方法有三种（来自用户群的佬们）:
+
+1. 删除env_key = "CODEX_API_KEY"
+
+2. 将env_key改为temp_env_key
+
+3. export 到环境变量
+
+   **Windows**
+
+   >PowerShell 临时设置
+   >
+   >在 PowerShell 里：
+   >
+   >```
+   >$env:OPENAI_API_KEY="你的apikey字符串"
+   >```
+   >
+   >查看：
+   >
+   >```
+   >echo $env:OPENAI_API_KEY
+   >```
+   >
+   >这个也是 **只对当前 PowerShell 会话有效**。
+   >
+   >永久设置（系统环境变量）
+   >
+   >1. 在开始菜单搜索：**“环境变量”** → 打开 “编辑系统环境变量”
+   >2. 点右下角的 **“环境变量(N)…”**
+   >3. 在 **“用户变量”** 里点 **“新建…”**
+   >   - 变量名：`OPENAI_API_KEY`
+   >   - 变量值：粘贴你的 key
+   >4. 确认保存，关闭所有窗口
+   >5. **重新打开** 终端 / PowerShell 让新变量生效
 
 ## 注意事项
 
