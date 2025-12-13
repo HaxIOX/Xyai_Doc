@@ -1,5 +1,11 @@
-  ## 🎉 11月29日活动公告
-  - codex 和 claude code 的套餐于今晚 8 点重新回归 🎉 
-  - ✅ **85 折活动优惠码**：`malajichi`（没错就是我 hiahiahia）
-  - 📈 90刀/天 codex套餐调整为59.9元
-  - 📈 30刀/天 claude code套餐调整为199元
+  ## 12月10日公告
+1.codex 和 claude code 的套餐**暂时**停售维护现有用户稳定
+
+2.codex和claude code**二次分发**、**合租**以及codex和claudecode**在非程序客户端调用**等行为可能触发站点**自动封禁措施。**
+
+3.后续站点会上线针对claude code和codex的并发限速
+
+
+
+
+

@@ -2,7 +2,7 @@
 
 ## Codex 常见问题
 
-**1.响应慢或者一直加载**
+### 1.响应慢或者一直加载
 
 可能原因：
 当前使用的域名所在的网络线路，在你本地运营商环境中质量较差（高延迟或丢包）。
@@ -19,7 +19,7 @@
 
 3. 在客户端或配置中，将接口域名切换为测速结果较优的节点。
 
-**2.Connection failed（连接失败）**
+### 2.Connection failed（连接失败）
 
 **报错示例：**
 
@@ -38,7 +38,7 @@ Connection failed: error sending request for url
 1. 如不确定或首次安装失败，建议 **重新执行一遍一键脚本**；
 2. 执行完成后，重启相关服务或工具，再尝试发起请求。
 
-**3.插件中使用 Codex 时卡住 / reconnecting**
+### 3.插件使用时卡住 / reconnecting
 
 **常见现象：**
 
@@ -54,7 +54,7 @@ Connection failed: error sending request for url
    - 按上文方法更换节点域名；
    - 或重新登录 / 重启插件。
 
-**4.报错 400**
+### 4.报错 400
 
 **报错示例：**
 
@@ -72,7 +72,7 @@ unexpected status 400 Bad Request: {"error":{"message":"codex号池无可用的�
 
 1. 建议 **稍作等待后再重试**，等待站长补号，通常 **30 分钟左右**即可恢复。
 
-**5.  Failed to install Codex**
+### 5.Failed to install Codex
 
 ```bash
  Failed to install Codex: 无法加载文件 C:\Program Files\nodejs\npm.ps1
@@ -106,6 +106,18 @@ npm -v
 
 如果正常显示 npm 版本号，则说明问题已解决
 
+### 6.403用户额度不足
+
+```bash
+{"error":{"message":"all 10 attempts failed: HTTP 403: {\"error\":{\"message\":\"用户额度不足, 剩余额度:
+＄-0.803940 (request id: 20251213090445622279237yZRZpRnR)\",\"type\":\"packy_api_error\",\"param\":\"\",\"code\":
+\"insufficient_user_quota\"}}","type":"request_error"}}
+```
+
+----
+
+为保证使用的稳定性，当号池账号不足时会切到其他渠道，当前报错为备用渠道的额度不足，大家耐心等待半小时到三小时之内修复，修复后会为大家进行补偿。
+
 ## claude code常见问题
 
 1.500错误
@@ -116,21 +128,7 @@ npm -v
 
 号池额度不够，联系客服后等待半个小时左右重试。
 
-## 使用相关
 
-### Q: cursor可以使用吗？
-
-A: 可以的，安装好环境后在cursor中安装codex插件即可一键使用。
-
-### Q: 如何使用
-
-A: 站点注册后安装，根据一键脚本安装后使用
-
-### Q: 是否稳定
-
-A: 目前后台多个账号轮询，基本稳定。
-
-> 站点还有很多不足的地方，希望大佬们多多包涵，有什么问题与完善建议都可以提出，我们会努力完善做到更好。
 
 
 

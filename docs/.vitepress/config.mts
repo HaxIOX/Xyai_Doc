@@ -9,10 +9,11 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '文档', link: '/guide/' },
+      { text: '快速开始', link: '/guide/' },
       { text: '官网直达', link: 'https://new.xychatai.com/pastel/#/carlist' },
       { text: 'Team店铺', link: 'https://newshop.xychatai.com/' },
-      { text: '站长的碎碎念', link: '/boss-index.md' }
+      { text: 'xyai站点监控', link: 'https://status.xychatai.com/status/xychatai' },
+      // { text: '站长的碎碎念', link: '/boss-index.md' }
     ],
 
     sidebar: [
