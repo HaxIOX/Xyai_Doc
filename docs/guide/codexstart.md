@@ -1,4 +1,6 @@
-# 🚀Codex 快速上手指南 
+
+
+# 🚀Codex 快速上手指南
 
 ## 💳购买方式 
 
@@ -12,7 +14,7 @@
 
 点击左上角**兑换码兑换**，如果兑换失败，请您稍等片刻再重新兑换。
 
-## ⚙️安装配置 
+## 安装配置
 
 在左侧导航栏点击 **vibecode**，首先进入的是**控制台**，后续您可以在这个页面**查看额度**与**使用情况**。
 
@@ -24,7 +26,7 @@
 > 1. 脚本会自动配置环境变量和 API 密钥
 > 2. 配置完成后重启终端即可开始使用 AI 编程助手
 
-# max模型配置
+# ⚙️max模型配置
 
 ## 终端使用
 
@@ -48,7 +50,7 @@ codex -m gpt-5.1-codex-max
 model = "gpt-5.1-codex-max"
 ```
 
-保存之后，下次你直接跑：
+保存之后，可以直接跑：
 
 ```
 codex
@@ -58,7 +60,7 @@ codex
 
 3.在[cc-switch配置](./codex-switch)，也是相当于修改config.toml文件了
 
-## VS Code 中启用 `codex-max` 模型
+## VS Code 中启用
 
 ### Windows 环境 
 
@@ -128,11 +130,11 @@ DEFAULT_MODEL_ORDER=[
 
 打开模型选择列表，就可以看到 `gpt-5.1-codex-max` 了。
 
+如果还是没有模型列表，或者选择max调用失败，可以参考[配置](/guide/codexstart#call-failed)
+
 ---
 
-### 🍎Linux / macOS 环境 
-
-由于不同平台/发行版打包方式不一样，有时候前端资源路径不完全相同，如果你找不到固定路径，可以这样操作：
+### Linux / macOS 环境
 
 **步骤 1：搜索配置文件**
 
@@ -195,21 +197,102 @@ DEFAULT_MODEL_ORDER=[
 
 ---
 
-### 如果重启后列表里还是看不到 max 模型 
+### 模型消失或调用失败的解决方法 {#call-failed}
+
+**如果重启后列表里还是看不到 max 模型**
 
 有时候前端的模型列表不会立刻刷新，可以按下面步骤"激活"一下：
 
 1. 先随便选择一个已经存在的模型（例如 `gpt-5.1-codex`）
-
 2. 在对话框里输入一句简单的话，比如：`你好`
-
 3. 再次打开模型选择列表，检查是否已经出现 `gpt-5.1-codex-max`
-
 4. 若此时出现，就说明修改已生效，可以正常使用 `max` 模型了 
+
+**如果修改后模型列表消失，或者max调用失败**
+
+可以尝试在`~/.codex/config.toml`文件的中转配置最后面加上
+
+```bash
+requires_openai_auth = true
+```
+
+修改后的`/config.toml`文件配置
+
+```bash
+disable_response_storage = true
+model = "gpt-5.1-codex-mini"
+model_provider = "codex"
+model_reasoning_effort = "medium"
+
+[features]
+web_search_request = true
+
+[model_providers.codex]
+base_url = "https://new.xychatai.com/codex/v1"
+env_key = "CODEX_API_KEY"
+name = "codex"
+wire_api = "responses"
+requires_openai_auth = true
+[notice]
+"hide_gpt-5.1-codex-max_migration_prompt" = true
+
+```
+
+然后重启下vscode 
+
+测试结果
+
+![1764554827460](./assets/1764554827460.png)
+
+![1764554990749](./assets/1764554990749.png)
+
+
 
 ---
 
-## 注意事项 
+## 插件配置相关问题
+
+### Missing environment variable
+
+更新插件版本之后导致报错Missing environment variable，
+
+解决方法有三种（来自用户群的佬们）:
+
+1. 删除env_key = "CODEX_API_KEY"
+
+2. 将env_key改为temp_env_key
+
+3. export 到环境变量
+
+   **Windows**
+
+   >PowerShell 临时设置
+   >
+   >在 PowerShell 里：
+   >
+   >```
+   >$env:OPENAI_API_KEY="你的apikey字符串"
+   >```
+   >
+   >查看：
+   >
+   >```
+   >echo $env:OPENAI_API_KEY
+   >```
+   >
+   >这个也是 **只对当前 PowerShell 会话有效**。
+   >
+   >永久设置（系统环境变量）
+   >
+   >1. 在开始菜单搜索：**“环境变量”** → 打开 “编辑系统环境变量”
+   >2. 点右下角的 **“环境变量(N)…”**
+   >3. 在 **“用户变量”** 里点 **“新建…”**
+   >   - 变量名：`OPENAI_API_KEY`
+   >   - 变量值：粘贴你的 key
+   >4. 确认保存，关闭所有窗口
+   >5. **重新打开** 终端 / PowerShell 让新变量生效
+
+## 注意事项
 
 - **插件更新**：插件更新后，`index-*.js` 可能会被覆盖，需要重新修改一次
 - **进阶配置**：这是通过修改插件打包前端资源的进阶玩法，如果未来插件内部实现变更，理论上有可能失效

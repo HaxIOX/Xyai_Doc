@@ -65,7 +65,7 @@ export default defineConfig({
     },
     outline: {
       label: '本页目录',   // 是替换 “On this page
-      level: [1, 2, 3],    
+      level: [1,4],    
     },
 
    //页脚

@@ -16,7 +16,6 @@
    - `node1.xychatai.com`
    - `node2.xychatai.com`
    - `node3.xychatai.com`
-
 3. 在客户端或配置中，将接口域名切换为测速结果较优的节点。
 
 ### 2.Connection failed（连接失败）
@@ -48,15 +47,19 @@ Connection failed: error sending request for url
 
 **解决方案：**
 
-1. 先尝试 **重启插件所在的软件**（例如客户端 / 编辑器等）；
-2. 如多次出现同样问题，可：
-   - 检查网络是否正常；
-   - 按上文方法更换节点域名；
-   - 或重新登录 / 重启插件。
+>1. 先尝试 **重启插件所在的软件**（例如客户端 / 编辑器等）；
+>2. 如多次出现同样问题，可：
+>   - 检查网络是否正常；
+>   - 按上文方法更换节点域名；
+>   - 或重新登录 / 重启插件。
+
+------
 
 ### 4.报错 400
 
 **报错示例：**
+
+1.codex号池无可用的账号
 
 ```bash
 unexpected status 400 Bad Request: {"error":{"message":"codex号池无可用的账号
@@ -64,13 +67,22 @@ unexpected status 400 Bad Request: {"error":{"message":"codex号池无可用的�
 (ratelimited or failed)","type":"request_error"}}
 ```
 
-**含义：**
-
-- 当前所有 Codex 账户均不可用，可能是号池账号不足。
-
 **解决方案：**
 
-1. 建议 **稍作等待后再重试**，等待站长补号，通常 **30 分钟左右**即可恢复。
+> 建议 **稍作等待后再重试**，等待站长补号，通常 **30 分钟左右**即可恢复。
+
+2.HTTP 503
+
+```bash
+unexpected status 400 Bad Request: {"error":{"message":"all 10 attempts failed: 
+HTTP 503: {"error":{"code":"","message":"所有令牌分组 Codex专用 下
+对于模型 gpt-5.1-codex-max 均无可用渠道，请更换分组尝试
+(request id:20251130224927129140426(CZyvzND))","type":"rix_api_error"}},"type":"request_error"}}
+```
+
+> 当号池没有可使用的账号时，会自动切到备用的api渠道，该渠道暂时不支持`gpt-5.1-codex-max`模型,可先切回其他模型，等待补号后使用`max`模型。
+
+------
 
 ### 5.Failed to install Codex
 
@@ -82,29 +94,39 @@ unexpected status 400 Bad Request: {"error":{"message":"codex号池无可用的�
 
 **解决方案**
 
-1.管理员权限运行 PowerShell
+> 1.管理员权限运行 PowerShell
+>
+> ```bash
+> Set-ExecutionPolicy RemoteSigned
+> ```
+>
+> 输入命令后会提示你确认是否更改策略，输入 Y 确认即可。
+>
+> 2.使用 CMD 或 PowerShell 的“绕过模式”启动
+>
+> ```
+> powershell -ExecutionPolicy Bypass
+> ```
+>
+> 3.验证是否修复成功
+>
+> 在修改策略后，再次运行：
+>
+> ```powershell
+> npm -v
+> ```
+>
+> 如果正常显示 npm 版本号，则说明问题已解决
 
-```bash
-Set-ExecutionPolicy RemoteSigned
-```
+------
 
-输入命令后会提示你确认是否更改策略，输入 Y 确认即可。
+**6.命令行一切正常，但是在vscode插件里遇到这个报错：`Missing environment variable`**
 
-2.使用 CMD 或 PowerShell 的“绕过模式”启动
+openai官方更新了codex插件和codex cli导致的
 
-```
-powershell -ExecutionPolicy Bypass
-```
+**解决方案**
 
-3.验证是否修复成功
-
-在修改策略后，再次运行：
-
-```powershell
-npm -v
-```
-
-如果正常显示 npm 版本号，则说明问题已解决
+>卸载重装下codex插件，如果还是不行删除配置文件`~/.codex/config.toml`
 
 ### 6.403用户额度不足
 
@@ -126,8 +148,7 @@ npm -v
 500 {"error":{"code":null,"message":"没有可用token（traceid: cd311bf0a9777b18aa39780bab544328）","param":null,"type":"invalid_request_error"}}
 ```
 
-号池额度不够，联系客服后等待半个小时左右重试。
-
+> 号池额度无了，联系客服后等待半个小时左右重试。
 
 
 
